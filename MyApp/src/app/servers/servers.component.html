@@ -1,1 +1,7 @@
-<p>servers works well!</p>
+<div  class="row">
+
+<p>{{'Server'}} with ID {{serverId}} is {{ getServerStatus() }}</p>
+
+<button [disabled]="!allowNewServer" class="btn btn-primary">Add Server</button>
+<p [innerText]="allowNewServer"></p>
+</div>

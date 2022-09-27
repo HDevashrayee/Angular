@@ -11,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+
+   }
+
+  serverId: number =10;
+  serverStatus: string = 'offline';
+  
+  allowNewServer = false;
 
   ngOnInit(): void {
   }
 
+  getServerStatus(){
+    return this.serverStatus;
+  }
 }
